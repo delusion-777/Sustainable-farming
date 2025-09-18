@@ -15,7 +15,9 @@
             <div class="header-image">
                 <img src="header.jpg" alt="Sustainable Farming Header" class="header-img">
             </div>
+
             <div class="header-content">
+                <!-- Logo and Title -->
                 <div class="logo-section">
                     <div class="logo">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -26,6 +28,8 @@
                         <span class="logo-text">Krishi Mitra</span>
                     </div>
                 </div>
+
+                <!-- Navigation -->
                 <nav class="nav-desktop">
                     <button class="nav-btn" data-view="dashboard">Dashboard</button>
                     <button class="nav-btn" data-view="game">Farm Game</button>
@@ -33,6 +37,8 @@
                     <button class="nav-btn" data-view="leaderboard">Leaderboard</button>
                     <button class="nav-btn" data-view="store">Store</button>
                 </nav>
+
+                <!-- User Info -->
                 <div class="user-section">
                     <div class="coins-display">Coins: <span id="coins-amount">1,250</span></div>
                     <div class="user-profile">
@@ -85,7 +91,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>1</td><td>Rahul</td><td>9,800</td></tr>
+                        <tr><td>1</td><td>Rahul </td><td>9,800</td></tr>
                         <tr><td>2</td><td>Priya Singh</td><td>9,450</td></tr>
                         <tr><td>3</td><td>Amit Kumar</td><td>8,900</td></tr>
                         <tr><td>4</td><td>Neha Patel</td><td>8,450</td></tr>
@@ -100,6 +106,7 @@
             <div id="store-view" class="view">
                 <h2>Government Store</h2>
                 <p>Buy tools, seeds, and fertilizers for your farm! Each item shows coins + INR price offer.</p>
+
                 <div class="store-grid">
                     <div class="store-item">
                         <img src="seed-bag.jpg" alt="Seed Bag">
@@ -129,47 +136,10 @@
             </div>
         </div>
     </main>
+
+    <div id="toast-container" class="toast-container"></div>
 </div>
 
-<script>
-    // JS for navigation
-    const navButtons = document.querySelectorAll('.nav-btn');
-    const views = document.querySelectorAll('.view');
-
-    navButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const target = btn.getAttribute('data-view');
-            views.forEach(view => {
-                if (view.id === target + '-view') {
-                    view.classList.add('active');
-                } else {
-                    view.classList.remove('active');
-                }
-            });
-        });
-    });
-
-    // Example: Buy button functionality
-    const buyButtons = document.querySelectorAll('.buy-btn');
-    const coinsAmount = document.getElementById('coins-amount');
-
-    buyButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            let coins = parseInt(coinsAmount.textContent.replace(/,/g, ''));
-            const priceText = btn.previousElementSibling.textContent;
-            const coinMatch = priceText.match(/(\d+) coins/);
-            if (coinMatch) {
-                const price = parseInt(coinMatch[1]);
-                if (coins >= price) {
-                    coins -= price;
-                    coinsAmount.textContent = coins.toLocaleString();
-                    alert('Item purchased!');
-                } else {
-                    alert('Not enough coins!');
-                }
-            }
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
