@@ -50,12 +50,11 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'dist', // ⚡ change build output to dist (gh-pages expects this)
+    outDir: 'dist', // ✅ GitHub Pages expects dist/
   },
   server: {
     port: 3000,
     open: true,
   },
-  base: '/Sustainable-farming/',
- // ⚡ ADD this → replace <repo-name> with your GitHub repo
+  base: '/Sustainable-farming/', // ✅ must match your repo name exactly
 });
