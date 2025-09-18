@@ -3,143 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishi Mitra - Sustainable Farming Platform</title>
+    <title>Sustainable Farming Platform</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="app">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-image">
-                <img src="header.jpg" alt="Sustainable Farming Header" class="header-img">
-            </div>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo and Title -->
+                    <div class="logo-section">
+                        <div class="logo">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                            <span class="logo-text">Krishi Mitra</span>
+                        </div>
+                    </div>
 
-            <div class="header-content">
-                <!-- Logo and Title -->
-                <div class="logo-section">
-                    <div class="logo">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
+                    <!-- Navigation -->
+                    <nav class="nav-desktop">
+                        <button class="nav-btn" data-view="dashboard">
+                            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3v18h18"/>
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                            </svg>
+                            Dashboard
+                        </button>
+                        <button class="nav-btn" data-view="game">
+                            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="6" y1="11" x2="10" y2="11"/>
+                                <line x1="8" y1="9" x2="8" y2="13"/>
+                                <line x1="15" y1="12" x2="15.01" y2="12"/>
+                                <line x1="18" y1="10" x2="18.01" y2="10"/>
+                                <path d="M17.32 5H6.68a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h10.64a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"/>
+                            </svg>
+                            Farm Game
+                        </button>
+                        <button class="nav-btn" data-view="library">
+                            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                            Library
+                        </button>
+                        <button class="nav-btn" data-view="leaderboard">
+                            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                <path d="M4 22h16"/>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21l-1.5.9c-.5.3-1.03.3-1.53 0l-1.5-.9C4.47 17.98 4 17.55 4 17v-2.34"/>
+                                <path d="M20 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C25.53 17.98 26 17.55 26 17v-2.34"/>
+                                <path d="M12 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C17.53 17.98 18 17.55 18 17v-2.34"/>
+                            </svg>
+                            Leaderboard
+                        </button>
+                        <button class="nav-btn" data-view="store">
+                            <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                            Store
+                        </button>
+                    </nav>
+
+                    <!-- User Info -->
+                    <div class="user-section">
+                        <!-- Language Selector -->
+                        <div class="language-selector">
+                            <select id="language-select" class="language-select">
+                                <option value="en">English</option>
+                                <option value="hi">हिन्दी</option>
+                                <option value="ta">தமிழ்</option>
+                                <option value="te">తెలుగు</option>
+                            </select>
+                        </div>
+
+                        <!-- Coins -->
+                        <div class="coins-display">
+                            <svg class="coins-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="8" cy="8" r="6"/>
+                                <path d="M18.09 10.37A6 6 0 1 1 6.71 15"/>
+                            </svg>
+                            <span class="coins-amount" id="coins-amount">1,250</span>
+                        </div>
+
+                        <!-- User Profile -->
+                        <div class="user-profile">
+                            <div class="user-info">
+                                <p class="user-name">Krishi Mitra</p>
+                                <span class="user-level">Level 8</span>
+                            </div>
+                            <div class="user-avatar">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile">
+                    <button class="nav-btn-mobile" data-view="dashboard">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
                         </svg>
-                        <span class="logo-text">Krishi Mitra</span>
-                    </div>
-                </div>
-
-                <!-- Navigation -->
-                <nav class="nav-desktop">
-                    <button class="nav-btn" data-view="dashboard">Dashboard</button>
-                    <button class="nav-btn" data-view="game">Farm Game</button>
-                    <button class="nav-btn" data-view="library">Library</button>
-                    <button class="nav-btn" data-view="leaderboard">Leaderboard</button>
-                    <button class="nav-btn" data-view="store">Store</button>
+                    </button>
+                    <button class="nav-btn-mobile" data-view="game">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="6" y1="11" x2="10" y2="11"/>
+                            <line x1="8" y1="9" x2="8" y2="13"/>
+                            <line x1="15" y1="12" x2="15.01" y2="12"/>
+                            <line x1="18" y1="10" x2="18.01" y2="10"/>
+                            <path d="M17.32 5H6.68a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h10.64a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"/>
+                        </svg>
+                    </button>
+                    <button class="nav-btn-mobile" data-view="library">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </button>
+                    <button class="nav-btn-mobile" data-view="leaderboard">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                            <path d="M4 22h16"/>
+                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21l-1.5.9c-.5.3-1.03.3-1.53 0l-1.5-.9C4.47 17.98 4 17.55 4 17v-2.34"/>
+                            <path d="M20 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C25.53 17.98 26 17.55 26 17v-2.34"/>
+                            <path d="M12 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C17.53 17.98 18 17.55 18 17v-2.34"/>
+                        </svg>
+                    </button>
+                    <button class="nav-btn-mobile" data-view="store">
+                        <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                    </button>
                 </nav>
+            </div>
+        </header>
 
-                <!-- User Info -->
-                <div class="user-section">
-                    <div class="coins-display">Coins: <span id="coins-amount">1,250</span></div>
-                    <div class="user-profile">
-                        <p class="user-name">Krishi Mitra</p>
-                        <span class="user-level">Level 8</span>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Background pattern -->
+            <div class="bg-pattern"></div>
+            
+            <!-- Content Container -->
+            <div class="content-container">
+                <!-- Dashboard View -->
+                <div id="dashboard-view" class="view active">
+                    <div class="dashboard">
+                        <!-- Welcome Section -->
+                        <div class="welcome-section">
+                            <h2 class="welcome-title">Welcome to Your Farm Dashboard</h2>
+                            <p class="welcome-subtitle">Track your sustainable farming journey and grow your impact!</p>
+                            <div class="welcome-badges">
+                                <span class="badge badge-green">
+                                    <svg class="badge-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    Day 15 Streak
+                                </span>
+                                <span class="badge badge-yellow">Level 8</span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Overview -->
+                        <div class="stats-grid">
+                            <div class="stat-card stat-green">
+                                <div class="stat-header">
+                                    <h3 class="stat-title">Crops Grown</h3>
+                                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 13l3 3 7-7"/>
+                                        <path d="M10.5 6.5L13 9l7-7"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-value">127</div>
+                                    <p class="stat-subtitle">+12 this week</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card stat-blue">
+                                <div class="stat-header">
+                                    <h3 class="stat-title">Water Saved</h3>
+                                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-value">340L</div>
+                                    <p class="stat-subtitle">Efficient irrigation</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card stat-green">
+                                <div class="stat-header">
+                                    <h3 class="stat-title">CO₂ Reduced</h3>
+                                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                        <path d="M2 17l10 5 10-5"/>
+                                        <path d="M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-value">2.4kg</div>
+                                    <p class="stat-subtitle">Environmental impact</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-card stat-orange">
+                                <div class="stat-header">
+                                    <h3 class="stat-title">Soil Health</h3>
+                                    <svg class="stat-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 3v18h18"/>
+                                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                                    </svg>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-value">88%</div>
+                                    <p class="stat-subtitle">Excellent condition</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Section -->
+                        <div class="progress-section">
+                            <div class="progress-card">
+                                <div class="progress-header">
+                                    <h3 class="progress-title">
+                                        <svg class="progress-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                            <path d="M4 22h16"/>
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21l-1.5.9c-.5.3-1.03.3-1.53 0l-1.5-.9C4.47 17.98 4 17.55 4 17v-2.34"/>
+                                            <path d="M20 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C25.53 17.98 26 17.55 26 17v-2.34"/>
+                                            <path d="M12 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C17.53 17.98 18 17.55 18 17v-2.34"/>
+                                        </svg>
+                                        Experience Progress
+                                    </h3>
+                                    <p class="progress-description">8,450 / 10,000 XP to next level</p>
+                                </div>
+                                <div class="progress-content">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 84.5%"></div>
+                                    </div>
+                                    <div class="progress-text">1,550 XP remaining</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-card">
+                                <div class="progress-header">
+                                    <h3 class="progress-title">
+                                        <svg class="progress-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                            <path d="M2 17l10 5 10-5"/>
+                                            <path d="M2 12l10 5 10-5"/>
+                                        </svg>
+                                        Sustainability Score
+                                    </h3>
+                                    <p class="progress-description">Your environmental impact rating</p>
+                                </div>
+                                <div class="progress-content">
+                                    <div class="sustainability-score">92/100</div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 92%"></div>
+                                    </div>
+                                    <div class="progress-text">Excellent! You're making a real difference.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Achievements and Actions -->
+                        <div class="achievements-actions">
+                            <div class="achievements-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Recent Achievements</h3>
+                                    <p class="card-description">Your latest farming milestones</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="achievement unlocked">
+                                        <span class="achievement-icon">🌱</span>
+                                        <div class="achievement-info">
+                                            <p class="achievement-name">Green Thumb</p>
+                                            <p class="achievement-description">Grew 100 plants</p>
+                                        </div>
+                                        <span class="achievement-badge">Unlocked</span>
+                                    </div>
+                                    <div class="achievement unlocked">
+                                        <span class="achievement-icon">💧</span>
+                                        <div class="achievement-info">
+                                            <p class="achievement-name">Water Wise</p>
+                                            <p class="achievement-description">Saved 500L of water</p>
+                                        </div>
+                                        <span class="achievement-badge">Unlocked</span>
+                                    </div>
+                                    <div class="achievement locked">
+                                        <span class="achievement-icon">🌍</span>
+                                        <div class="achievement-info">
+                                            <p class="achievement-name">Soil Master</p>
+                                            <p class="achievement-description">Improved soil health by 50%</p>
+                                        </div>
+                                    </div>
+                                    <div class="achievement locked">
+                                        <span class="achievement-icon">🌿</span>
+                                        <div class="achievement-info">
+                                            <p class="achievement-name">Eco Warrior</p>
+                                            <p class="achievement-description">Reduced CO2 by 5kg</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="actions-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Quick Actions</h3>
+                                    <p class="card-description">Continue your farming journey</p>
+                                </div>
+                                <div class="card-content">
+                                    <button class="action-btn" data-action="game">
+                                        <svg class="action-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M7 13l3 3 7-7"/>
+                                            <path d="M10.5 6.5L13 9l7-7"/>
+                                        </svg>
+                                        <div class="action-info">
+                                            <p class="action-title">Start Farm Game</p>
+                                            <p class="action-description">Continue your virtual farming</p>
+                                        </div>
+                                    </button>
+                                    <button class="action-btn" data-action="library">
+                                        <svg class="action-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                                            <path d="M4 22h16"/>
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21l-1.5.9c-.5.3-1.03.3-1.53 0l-1.5-.9C4.47 17.98 4 17.55 4 17v-2.34"/>
+                                            <path d="M20 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C25.53 17.98 26 17.55 26 17v-2.34"/>
+                                            <path d="M12 14.66V17c0 .55.47.98.97 1.21l1.5.9c.5.3 1.03.3 1.53 0l1.5-.9C17.53 17.98 18 17.55 18 17v-2.34"/>
+                                        </svg>
+                                        <div class="action-info">
+                                            <p class="action-title">Learn Techniques</p>
+                                            <p class="action-description">Explore farming library</p>
+                                        </div>
+                                    </button>
+                                    <button class="action-btn" data-action="leaderboard">
+                                        <svg class="action-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M3 3v18h18"/>
+                                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                                        </svg>
+                                        <div class="action-info">
+                                            <p class="action-title">Check Rankings</p>
+                                            <p class="action-description">View global leaderboard</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game View -->
+                <div id="game-view" class="view">
+                    <div class="game-container">
+                        <h2 class="view-title">Farm Game</h2>
+                        <p class="view-subtitle">Virtual farming simulation coming soon...</p>
+                    </div>
+                </div>
+
+                <!-- Library View -->
+                <div id="library-view" class="view">
+                    <div class="library-container">
+                        <h2 class="view-title">Farming Library</h2>
+                        <p class="view-subtitle">Educational resources coming soon...</p>
+                    </div>
+                </div>
+
+                <!-- Leaderboard View -->
+                <div id="leaderboard-view" class="view">
+                    <div class="leaderboard-container">
+                        <h2 class="view-title">Leaderboard</h2>
+                        <p class="view-subtitle">Global rankings coming soon...</p>
+                    </div>
+                </div>
+
+                <!-- Store View -->
+                <div id="store-view" class="view">
+                    <div class="store-container">
+                        <h2 class="view-title">Government Store</h2>
+                        <p class="view-subtitle">Government resources coming soon...</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </main>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="content-container">
-            <!-- Dashboard View -->
-            <div id="dashboard-view" class="view active">
-                <h2>Welcome to Your Farm Dashboard</h2>
-                <p>Track your sustainable farming journey!</p>
-            </div>
+        <!-- Toast Container -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
 
-            <!-- Game View -->
-            <div id="game-view" class="view">
-                <h2>Farm Game</h2>
-                <p>Virtual farming simulation coming soon...</p>
-            </div>
-
-            <!-- Library View -->
-            <div id="library-view" class="view">
-                <h2>Farming Library</h2>
-                <p>Educational resources to improve your farming knowledge:</p>
-                <ul class="library-resources">
-                    <li><a href="#">Sustainable Crop Techniques - Article</a></li>
-                    <li><a href="#">Organic Fertilizers Guide - PDF</a></li>
-                    <li><a href="#">Water-Saving Irrigation Methods - Video</a></li>
-                    <li><a href="#">Farm Pest Management - PDF</a></li>
-                    <li><a href="#">Soil Health Tips - Article</a></li>
-                </ul>
-            </div>
-
-            <!-- Leaderboard View -->
-            <div id="leaderboard-view" class="view">
-                <h2>Leaderboard</h2>
-                <p>Top Indian Farmers:</p>
-                <table class="leaderboard-table">
-                    <thead>
-                        <tr>
-                            <th>Rank</th>
-                            <th>Name</th>
-                            <th>Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Rahul</td><td>9,800</td></tr>
-                        <tr><td>2</td><td>Priya Singh</td><td>9,450</td></tr>
-                        <tr><td>3</td><td>Amit Kumar</td><td>8,900</td></tr>
-                        <tr><td>4</td><td>Neha Patel</td><td>8,450</td></tr>
-                        <tr><td>5</td><td>Vikas Reddy</td><td>8,200</td></tr>
-                        <tr><td>6</td><td>Parvati Nair</td><td>7,950</td></tr>
-                        <tr><td>7</td><td>Manoj Yadav</td><td>7,500</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Store View -->
-            <div id="store-view" class="view">
-                <h2>Government Store</h2>
-                <p>Buy tools, seeds, and fertilizers for your farm! Each item shows coins + INR price offer.</p>
-
-                <div class="store-grid">
-                    <div class="store-item">
-                        <img src="seed-bag.jpg" alt="Seed Bag">
-                        <h3>Seed Bag</h3>
-                        <p>180 coins + ₹1,050 (Offer)</p>
-                        <button class="buy-btn">Buy</button>
-                    </div>
-                    <div class="store-item">
-                        <img src="fertilizer.jpg" alt="Fertilizer">
-                        <h3>Fertilizer</h3>
-                        <p>300 coins + ₹2,500 (Offer)</p>
-                        <button class="buy-btn">Buy</button>
-                    </div>
-                    <div class="store-item">
-                        <img src="watering-can.jpg" alt="Watering Can">
-                        <h3>Watering Can</h3>
-                        <p>150 coins + ₹950 (Offer)</p>
-                        <button class="buy-btn">Buy</button>
-                    </div>
-                    <div class="store-item">
-                        <img src="tractor.jpg" alt="Mini Tractor">
-                        <h3>Mini Tractor</h3>
-                        <p>1,500 coins + ₹12,500 (Offer)</p>
-                        <button class="buy-btn">Buy</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <div id="toast-container" class="toast-container"></div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
