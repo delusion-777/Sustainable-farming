@@ -10,7 +10,6 @@ This is a converted version of the React/TypeScript Sustainable Farming Platform
 - **Multi-language Support**: English, Hindi, Tamil, and Telugu
 - **Interactive Dashboard**: Real-time stats and progress tracking
 - **Achievement System**: Gamified farming experience
-  
 - **Toast Notifications**: User feedback system
 - **Local Storage**: Persistent data storage
 - **Progressive Enhancement**: Works without JavaScript (basic functionality)
