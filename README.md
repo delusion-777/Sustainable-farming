@@ -2,7 +2,7 @@
 
 This is a converted version of the React/TypeScript Sustainable Farming Platform, now built with pure HTML, CSS, and JavaScript.
 
-## Features
+## Features Added 
 
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **Modern UI**: Clean, modern interface with smooth animations
