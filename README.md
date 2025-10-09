@@ -1,6 +1,6 @@
 # Sustainable Farming Platform - HTML/CSS/JavaScript Version
 
-This is a converted version of the React/TypeScript Sustainable Farming Platform, now built with pure HTML, CSS, and JavaScript.
+This is a converted version of the React/TypeScript Sustainable Farming Platform, now built with pure Nodejs and react .
 
 ## Features Added 
 
