@@ -4,7 +4,6 @@ This is a converted version of the React/TypeScript Sustainable Farming Platform
 
 ## Features
 
-
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **Modern UI**: Clean, modern interface with smooth animations
 - **Multi-language Support**: English, Hindi, Tamil, and Telugu
